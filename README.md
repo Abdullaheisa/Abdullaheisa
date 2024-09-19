@@ -12,7 +12,8 @@ I am a student, currently studying at the Faculty of Science, Al-Azhar Universit
 - **Frontend Development**
 	- ![HTML5](https://img.shields.io/badge/-HTML5-%23E44D27?style=flat-square&logo=html5&logoColor=ffffff)
 	- ![CSS3](https://img.shields.io/badge/-CSS3-%231572B6?style=flat-square&logo=css3)
-	![image](https://github.com/user-attachments/assets/f2b3ebe7-1056-4e81-9ed6-20be6fd37685)
+	![image] (<img src="![image](https://github.com/user-attachments/assets/e52fa39b-a383-494c-bed6-4007334ea0f5)
+"/>)
 
 	-  <img src="https://v5.getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="50" height="30">
 	- ![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat-square&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23FFCE5A)
