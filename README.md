@@ -6,19 +6,16 @@
 </div>
 
 ## About me :mortar_board:
-321 / 5,000
 I am a student, currently studying at the Faculty of Science, Al-Azhar University. Very early in my life, I started falling in love with technology 😍 This love helped me develop a very good technological mindset, and gave me the curiosity to learn more. I firmly believe that any amount of knowledge is not enough. 🧠
 
 ## What I know :computer:
-- **Competitive Programming**
-	- Python ❤️
-	- C++
-	- Some Java
 - **Frontend Development**
-	- HTML, CSS and Javascript :white_check_mark:
-	- Bootstrap
-	- React with Redux :electron:
-	- React Native
+	- ![HTML5](https://img.shields.io/badge/-HTML5-%23E44D27?style=flat-square&logo=html5&logoColor=ffffff)
+	- ![CSS3](https://img.shields.io/badge/-CSS3-%231572B6?style=flat-square&logo=css3)
+	- ![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat-square&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23FFCE5A)
+	![React](https://img.shields.io/badge/-React-%23282C34?style=flat-square&logo=react)
+	![Sass](https://img.shields.io/badge/-Sass-%23CC6699?style=flat-square&logo=sass&logoColor=ffffff)
+	![Adobe Photoshop](http://img.shields.io/badge/-Abode%20Photoshop-26C9FF?style=flat-square&logo=adobe-photoshop&logoColor=ffffff)
 
 ## What I want to do next :thinking:
 - Backend Development (to become a Full-Stack developer)
@@ -95,11 +92,4 @@ Thanks for stopping by! 😁
 ## ⭐️ from [Vedant Khairnar](https://github.com/VedantKhairnar)
 
 
-#### Frontend
-![HTML5](https://img.shields.io/badge/-HTML5-%23E44D27?style=flat-square&logo=html5&logoColor=ffffff)
-![CSS3](https://img.shields.io/badge/-CSS3-%231572B6?style=flat-square&logo=css3)
-![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat-square&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23FFCE5A)
-![Nodejs](https://img.shields.io/badge/-Nodejs-black?style=flat-square&logo=Node.js)
-![React](https://img.shields.io/badge/-React-%23282C34?style=flat-square&logo=react)
-![Sass](https://img.shields.io/badge/-Sass-%23CC6699?style=flat-square&logo=sass&logoColor=ffffff)
-![Adobe Photoshop](http://img.shields.io/badge/-Abode%20Photoshop-26C9FF?style=flat-square&logo=adobe-photoshop&logoColor=ffffff)
+
