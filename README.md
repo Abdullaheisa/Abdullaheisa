@@ -39,57 +39,6 @@ Thanks for stopping by! 😁
 
 ⭐️ From [Sarthakbh321](https://github.com/Sarthakbh321)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div align="center">
-<img src="https://i.imgur.com/8MupZHY.gif" width="400px" />
-<br>
-
-# Hello, world! 👋
-
-#### You can find me on:
-[Linkedin](https://www.linkedin.com/in/soroush-chehresa) - [Stackoverflow](https://stackoverflow.com/users/9516173/soroush-chehresa) - [Medium](https://medium.com/@soroushchehresa) - [Dribbble](https://dribbble.com/soroushchehresa) - [Twitter](https://twitter.com/soroushchehresa) - [Gmail](mailto:s1996ch@gmail.com)
-<br>
-<br>
-<br>
-<img src="https://github-readme-stats.vercel.app/api?username=soroushchehresa&show_icons=true" />
-<br>
-<br>
-⭐️ From [soroushchehresa](https://github.com/soroushchehresa) 
-</div>
-
-
-
-[![](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/images/0)](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/links/0)[![](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/images/1)](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/links/1)[![](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/images/2)](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/links/2)[![](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/images/3)](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/links/3)[![](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/images/4)](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/links/4)[![](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/images/5)](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/links/5)[![](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/images/6)](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/links/6)[![](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/images/7)](https://sourcerer.io/fame/VedantKhairnar/VedantKhairnar/VedantKhairnar.github.io/links/7)
-
-
-
-![Made with love in India](https://madewithlove.now.sh/in?heart=true&template=for-the-badge)
-
 ## ⭐️ from [Vedant Khairnar](https://github.com/VedantKhairnar)
 
 
