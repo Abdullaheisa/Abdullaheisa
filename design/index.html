@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>معرض تصميم Dryyve 2.0 UI/UX Redesign - Figma & Visual System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Cairo"', '"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif; background-color: #080C14; color: #F8FAFC; }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 pb-16">
+
+  <!-- TOP HEADER -->
+  <header class="border-b border-slate-800 bg-slate-900/80 sticky top-0 z-50 backdrop-blur-md px-8 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-4 space-x-reverse">
+      <div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center text-slate-950 font-black text-2xl shadow-lg shadow-brand-500/20">
+        D
+      </div>
+      <div>
+        <h1 class="text-xl font-black text-white">تصميم واجهة المستخدم DRYYVE 2.0 (UI/UX Redesign)</h1>
+        <p class="text-xs text-slate-400">ملفات التصميم والمجسمات البصرية والنظام الهيكلي (Design System & Visual Mockups)</p>
+      </div>
+    </div>
+
+    <div class="flex items-center space-x-3 space-x-reverse">
+      <a href="../FIGMA_DESIGN_SYSTEM.md" target="_blank" class="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700 hover:bg-slate-700 text-xs font-bold text-white transition flex items-center gap-2">
+        <i class="fa-brands fa-figma text-purple-400"></i> وثيقة توثيق Figma
+      </a>
+      <a href="../01_desktop_hero_booking.png" download class="px-4 py-2 rounded-xl bg-brand-500 text-slate-950 text-xs font-extrabold hover:bg-brand-400 transition flex items-center gap-2">
+        <i class="fa-solid fa-download"></i> تحميل جميع الصور (PNG)
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 pt-8 space-y-10">
+
+    <!-- HERO INTRODUCTION -->
+    <div class="glass-panel p-8 rounded-3xl border border-brand-500/20 bg-gradient-to-l from-brand-950/30 to-slate-900 space-y-4">
+      <div class="inline-flex items-center space-x-2 space-x-reverse px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/30 text-xs font-bold">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>تصميم UI/UX احترافي حديث مستوحى ومطور عن Dryyve.com</span>
+      </div>
+
+      <h2 class="text-3xl font-black text-white leading-relaxed">
+        تحسين تجربة واستئجار السيارات العالمية (Dryyve 2.0)
+      </h2>
+
+      <p class="text-slate-300 text-sm leading-relaxed max-w-4xl">
+        تمت إعادة تصميم موقع Dryyve بالكامل بالتركيز على الجودة البصرية العالية، التصفح السلس على الموبايل والديسكتوب، توضيح باقات التأمين وشفافية الأسعار بدون عمولات خفية، بالإضافة إلى توفير النظام التصميمي الكامل (Figma Design System) والجداول والمجسمات عالية الدقة (.PNG).
+      </p>
+
+      <div class="grid grid-cols-4 gap-4 pt-4 border-t border-slate-800/80 text-xs">
+        <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+          <div class="font-bold text-brand-400">✨ شريط البحث الذكي</div>
+          <div class="text-slate-400 mt-1">فلترة فورية وتحديد المواعيد والمواقع بدون تعقيد.</div>
+        </div>
+
+        <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+          <div class="font-bold text-brand-400">🚘 كتالوج أسطول السيارات</div>
+          <div class="text-slate-400 mt-1">بطاقات تفاعلية مع مواصفات المقاعد والوقود والتأمين.</div>
+        </div>
+
+        <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+          <div class="font-bold text-brand-400">🛡️ باقة Super Cover (0$ تأمين)</div>
+          <div class="text-slate-400 mt-1">اختيار التغطية التأمينية الشاملة بوضوح تام.</div>
+        </div>
+
+        <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+          <div class="font-bold text-brand-400">📱 تصميم متوافق 100% للموبايل</div>
+          <div class="text-slate-400 mt-1">واجهة لمسية سلسة مع زر حجز ثابت بالأسفل.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREVIEW MOCKUPS SECTION -->
+    <div class="space-y-6">
+      <h3 class="text-2xl font-extrabold text-white flex items-center gap-2">
+        <i class="fa-solid fa-eye text-brand-400"></i> معاينة الشاشات والتصاميم البصرية (High-Res Rendered Screens)
+      </h3>
+
+      <div class="grid grid-cols-2 gap-8">
+
+        <!-- CARD 1: DESKTOP HERO & BOOKING -->
+        <div class="glass-panel p-5 rounded-3xl border border-slate-800 hover:border-brand-500/50 transition space-y-4">
+          <div class="flex justify-between items-center">
+            <h4 class="font-bold text-lg text-white">1. الشاشة الرئيسية وشريط البحث (Desktop Hero & Search)</h4>
+            <a href="desktop_hero_booking.html" target="_blank" class="text-xs text-brand-400 hover:underline">فتح بدقة كاملة ↗</a>
+          </div>
+          <p class="text-xs text-slate-400">تصميم الصفحة الرئيسية بالنمط الزجاجي الحديث (Glassmorphism) مع محرك البحث والتأكيدات الأمنية.</p>
+
+          <div class="rounded-2xl overflow-hidden border border-slate-800 h-64 bg-slate-950 relative group">
+            <iframe src="desktop_hero_booking.html" class="w-[1920px] h-[1080px] origin-top-left scale-[0.32] pointer-events-none"></iframe>
+          </div>
+        </div>
+
+        <!-- CARD 2: FLEET CATALOG -->
+        <div class="glass-panel p-5 rounded-3xl border border-slate-800 hover:border-brand-500/50 transition space-y-4">
+          <div class="flex justify-between items-center">
+            <h4 class="font-bold text-lg text-white">2. كتالوج أسطول السيارات والفلاتر (Fleet Catalog)</h4>
+            <a href="desktop_fleet_catalog.html" target="_blank" class="text-xs text-brand-400 hover:underline">فتح بدقة كاملة ↗</a>
+          </div>
+          <p class="text-xs text-slate-400">استعراض السيارات المتاحة، فئات الكهرباء والـ SUV، والتصفية حسب ناقل الحركة والسعر.</p>
+
+          <div class="rounded-2xl overflow-hidden border border-slate-800 h-64 bg-slate-950 relative group">
+            <iframe src="desktop_fleet_catalog.html" class="w-[1920px] h-[1200px] origin-top-left scale-[0.32] pointer-events-none"></iframe>
+          </div>
+        </div>
+
+        <!-- CARD 3: 4-STEP BOOKING FLOW -->
+        <div class="glass-panel p-5 rounded-3xl border border-slate-800 hover:border-brand-500/50 transition space-y-4">
+          <div class="flex justify-between items-center">
+            <h4 class="font-bold text-lg text-white">3. خطوات الحجز وباقات الحماية (4-Step UX Flow)</h4>
+            <a href="step_by_step_flow.html" target="_blank" class="text-xs text-brand-400 hover:underline">فتح بدقة كاملة ↗</a>
+          </div>
+          <p class="text-xs text-slate-400">مراحل الحجز الأربعة الشفافة مع اختيار تغطية الـ Super Cover والخدمات الإضافية.</p>
+
+          <div class="rounded-2xl overflow-hidden border border-slate-800 h-64 bg-slate-950 relative group">
+            <iframe src="step_by_step_flow.html" class="w-[1920px] h-[1080px] origin-top-left scale-[0.32] pointer-events-none"></iframe>
+          </div>
+        </div>
+
+        <!-- CARD 4: MOBILE UI VIEW -->
+        <div class="glass-panel p-5 rounded-3xl border border-slate-800 hover:border-brand-500/50 transition space-y-4">
+          <div class="flex justify-between items-center">
+            <h4 class="font-bold text-lg text-white">4. واجهة الهواتف الذكية (Mobile App-like UX)</h4>
+            <a href="mobile_ux_view.html" target="_blank" class="text-xs text-brand-400 hover:underline">فتح بدقة كاملة ↗</a>
+          </div>
+          <p class="text-xs text-slate-400">واجهة الموبايل المصممة لشاشات اللمس مع القوائم المنسدلة وشريط التصفح السفلي.</p>
+
+          <div class="rounded-2xl overflow-hidden border border-slate-800 h-64 bg-slate-950 relative group">
+            <iframe src="mobile_ux_view.html" class="w-[1920px] h-[1080px] origin-top-left scale-[0.32] pointer-events-none"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FIGMA DESIGN TOKENS SYSTEM PREVIEW -->
+    <div class="glass-panel p-8 rounded-3xl border border-slate-800 space-y-6">
+      <h3 class="text-2xl font-extrabold text-white flex items-center gap-2">
+        <i class="fa-solid fa-palette text-brand-400"></i> نظام الألوان والخطوط (Figma Design Tokens)
+      </h3>
+
+      <div class="grid grid-cols-4 gap-6">
+
+        <!-- COLOR 1: EMERALD BRAND -->
+        <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="h-16 rounded-xl bg-brand-500 shadow-lg shadow-brand-500/20"></div>
+          <div>
+            <div class="font-bold text-sm text-white">Emerald Glow (Primary)</div>
+            <div class="text-xs text-slate-400 font-mono">#10B981 / rgb(16, 185, 129)</div>
+            <div class="text-[11px] text-slate-500 mt-1">يُستخدم للأزرار الرئيسية والتأكيدات وأسعار السيارات.</div>
+          </div>
+        </div>
+
+        <!-- COLOR 2: OBSIDIAN DARK -->
+        <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="h-16 rounded-xl bg-[#080C14] border border-slate-700"></div>
+          <div>
+            <div class="font-bold text-sm text-white">Obsidian Slate (Background)</div>
+            <div class="text-xs text-slate-400 font-mono">#080C14 / rgb(8, 12, 20)</div>
+            <div class="text-[11px] text-slate-500 mt-1">خلفية الموقع الداكنة التي تعطي لمسة فخامة وعصرية.</div>
+          </div>
+        </div>
+
+        <!-- COLOR 3: GLASS PANEL -->
+        <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="h-16 rounded-xl bg-[#0F172A]/80 border border-slate-700 backdrop-blur-md"></div>
+          <div>
+            <div class="font-bold text-sm text-white">Frosted Glass (Card)</div>
+            <div class="text-xs text-slate-400 font-mono">rgba(15, 23, 42, 0.75)</div>
+            <div class="text-[11px] text-slate-500 mt-1">بطاقات الحجز والفلترة بالنمط الزجاجي الشفاف.</div>
+          </div>
+        </div>
+
+        <!-- COLOR 4: ACCENT GOLD -->
+        <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="h-16 rounded-xl bg-amber-400 shadow-lg shadow-amber-400/20"></div>
+          <div>
+            <div class="font-bold text-sm text-white">VIP Badge (Accent)</div>
+            <div class="text-xs text-slate-400 font-mono">#FBBF24 / rgb(251, 191, 36)</div>
+            <div class="text-[11px] text-slate-500 mt-1">شارات التقييم الممتاز والسيارات الأكثر طلباً.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
