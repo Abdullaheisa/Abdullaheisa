@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dryyve 2.0 Redesign - Mobile Experience UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+            },
+            darkbg: '#080C14',
+            darkcard: '#0F172A',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #080C14; color: #F8FAFC; overflow-x: hidden; }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .phone-frame {
+      width: 412px;
+      height: 870px;
+      border-radius: 48px;
+      border: 10px solid #1E293B;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(16, 185, 129, 0.2);
+    }
+  </style>
+</head>
+<body class="w-[1920px] h-[1080px] bg-slate-950 flex items-center justify-center space-x-16 p-8">
+
+  <!-- LEFT: EXPLANATION OF MOBILE UX ENHANCEMENTS -->
+  <div class="max-w-xl space-y-6">
+    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 text-xs font-bold uppercase tracking-wider">
+      Mobile-First UI Design Spec
+    </div>
+
+    <h2 class="text-4xl font-extrabold text-white leading-tight">
+      Optimized Touch UX For Mobile Users
+    </h2>
+
+    <p class="text-slate-400 text-sm leading-relaxed">
+      Unlike the legacy Dryyve site which suffered from iframe scrolling issues on smartphones, Dryyve 2.0 introduces a native app-like mobile experience with smooth bottom sheets, quick filter chips, sticky CTA bars, and one-tap Apple Pay/Google Pay integration.
+    </p>
+
+    <!-- KEY MOBILE HIGHLIGHTS -->
+    <div class="space-y-4 pt-2">
+
+      <div class="p-4 rounded-2xl glass-panel border border-slate-800 flex items-start space-x-4">
+        <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center font-bold text-lg shrink-0">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white">48px+ Touch-Friendly Controls</h4>
+          <p class="text-xs text-slate-400 mt-0.5">Designed to eliminate misclicks with oversized selectors, native date picker triggers, and smooth swipe carousels.</p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-2xl glass-panel border border-slate-800 flex items-start space-x-4">
+        <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center font-bold text-lg shrink-0">
+          <i class="fa-solid fa-bolt-lightning"></i>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white">Instant Search Bottom Drawer</h4>
+          <p class="text-xs text-slate-400 mt-0.5">Location search opens a full-height interactive bottom drawer with recent searches & airport shortcuts.</p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-2xl glass-panel border border-slate-800 flex items-start space-x-4">
+        <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center font-bold text-lg shrink-0">
+          <i class="fa-brands fa-apple"></i>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white">Sticky Bottom Booking Bar</h4>
+          <p class="text-xs text-slate-400 mt-0.5">Always-visible price per day and quick confirmation button for effortless conversion on mobile.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- RIGHT: REALISTIC PHONE MOCKUP RENDER -->
+  <div class="phone-frame bg-slate-950 overflow-hidden relative flex flex-col justify-between">
+
+    <!-- PHONE STATUS BAR / DYNAMIC ISLAND -->
+    <div class="bg-slate-950 pt-3 px-6 pb-2 flex justify-between items-center text-xs text-white z-50">
+      <span class="font-bold">9:41</span>
+      <div class="w-24 h-4 bg-slate-900 rounded-full flex items-center justify-center">
+        <div class="w-3 h-3 bg-slate-800 rounded-full mr-2"></div>
+      </div>
+      <div class="flex items-center space-x-1.5 text-[10px]">
+        <i class="fa-solid fa-signal"></i>
+        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-solid fa-battery-full text-brand-400"></i>
+      </div>
+    </div>
+
+    <!-- MOBILE APP HEADER -->
+    <div class="px-5 py-3 glass-panel border-b border-slate-800 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-slate-950 font-black text-lg">
+          D
+        </div>
+        <span class="font-black text-lg text-white tracking-wider">DRYYVE<span class="text-brand-400">.</span></span>
+      </div>
+
+      <div class="flex items-center space-x-3 text-sm">
+        <button class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center">
+          🌐
+        </button>
+        <button class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- SCROLLABLE MOBILE CONTENT -->
+    <div class="p-4 space-y-4 overflow-y-auto flex-1">
+
+      <!-- HERO BANNER MINI -->
+      <div class="p-4 rounded-2xl bg-gradient-to-r from-brand-900/40 via-slate-900 to-slate-900 border border-brand-500/30 space-y-2">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-brand-400 bg-brand-500/10 px-2 py-0.5 rounded">
+          Vienna Airport • Special
+        </span>
+        <h3 class="text-lg font-black text-white leading-tight">Rent Brand-New Cars With 0$ Deposit</h3>
+      </div>
+
+      <!-- SEARCH BOX CARD -->
+      <div class="glass-panel p-4 rounded-2xl border border-slate-800 space-y-3">
+        <div class="flex justify-between items-center text-xs font-bold border-b border-slate-800 pb-2">
+          <span class="text-brand-400"><i class="fa-solid fa-car-side mr-1"></i> Quick Search</span>
+          <span class="text-slate-400">Round Trip</span>
+        </div>
+
+        <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 flex items-center justify-between">
+          <div>
+            <span class="text-[9px] text-slate-500 uppercase font-bold block">Pick-up Location</span>
+            <span class="text-xs font-bold text-white">Vienna Airport (VIE)</span>
+          </div>
+          <i class="fa-solid fa-plane-arrival text-brand-400 text-xs"></i>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
+            <span class="text-[9px] text-slate-500 uppercase font-bold block">Pick-up Date</span>
+            <span class="text-xs font-bold text-white">28 Oct, 10:00</span>
+          </div>
+
+          <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
+            <span class="text-[9px] text-slate-500 uppercase font-bold block">Drop-off Date</span>
+            <span class="text-xs font-bold text-white">04 Nov, 10:00</span>
+          </div>
+        </div>
+
+        <button class="w-full py-3 rounded-xl bg-brand-500 text-slate-950 font-extrabold text-xs shadow-lg shadow-brand-500/25">
+          SEARCH 250+ CARS
+        </button>
+      </div>
+
+      <!-- FEATURED MOBILE CAR CARD -->
+      <div class="glass-panel p-4 rounded-2xl border border-slate-800 space-y-3 relative">
+        <span class="absolute top-3 right-3 bg-emerald-500/10 text-emerald-400 text-[9px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">
+          ⚡ Electric
+        </span>
+
+        <h4 class="text-sm font-extrabold text-white">Tesla Model Y Long Range</h4>
+        <p class="text-[10px] text-slate-400">Automatic • Autopilot • 5 Seats</p>
+
+        <!-- CAR MINI ILLUSTRATION -->
+        <div class="h-24 flex items-center justify-center">
+          <svg class="w-36 h-20" viewBox="0 0 300 150" fill="none">
+            <path d="M30 110 Q 40 70, 90 55 L 140 40 Q 180 30, 230 45 L 270 70 Q 295 80, 290 110 Z" fill="#0EA5E9"/>
+            <circle cx="80" cy="110" r="22" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+            <circle cx="230" cy="110" r="22" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+          </svg>
+        </div>
+
+        <div class="flex items-center justify-between border-t border-slate-800 pt-2">
+          <div>
+            <span class="text-lg font-black text-brand-400">€49</span>
+            <span class="text-[10px] text-slate-400">/day</span>
+          </div>
+          <button class="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700 text-xs font-bold text-white">View Details</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM MOBILE NAVIGATION BAR -->
+    <div class="bg-slate-950 border-t border-slate-800 py-2.5 px-6 flex justify-between items-center text-[10px] text-slate-400 font-semibold z-50">
+      <div class="flex flex-col items-center text-brand-400">
+        <i class="fa-solid fa-magnifying-glass text-base mb-1"></i>
+        <span>Search</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fa-solid fa-car text-base mb-1"></i>
+        <span>Fleet</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fa-solid fa-receipt text-base mb-1"></i>
+        <span>My Trips</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fa-solid fa-headset text-base mb-1"></i>
+        <span>Support</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
