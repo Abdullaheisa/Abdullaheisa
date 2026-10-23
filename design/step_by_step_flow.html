@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dryyve 2.0 Redesign - 4-Step UX Flow & Protection Packages</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+            },
+            darkbg: '#080C14',
+            darkcard: '#0F172A',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #080C14; color: #F8FAFC; overflow-x: hidden; }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .step-active {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      color: #022C22;
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+    }
+  </style>
+</head>
+<body class="w-[1920px] h-[1080px] relative overflow-hidden bg-slate-950 p-12">
+
+  <!-- TOP HEADER TITLE -->
+  <div class="text-center max-w-3xl mx-auto mb-10">
+    <span class="px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 text-xs font-bold uppercase tracking-wider">
+      Dryyve 2.0 User Journey UX
+    </span>
+    <h2 class="text-4xl font-extrabold text-white mt-3">Seamless 4-Step Booking Process</h2>
+    <p class="text-slate-400 text-sm mt-2">Designed for maximum conversion, transparent zero-excess insurance options, and digital key pickup.</p>
+  </div>
+
+  <!-- PROGRESS TIMELINE STEP BAR -->
+  <div class="max-w-5xl mx-auto mb-12">
+    <div class="grid grid-cols-4 gap-4 relative">
+      <!-- CONNECTING LINE -->
+      <div class="absolute top-1/2 left-0 right-0 h-1 bg-slate-800 -translate-y-1/2 z-0"></div>
+
+      <!-- STEP 1 -->
+      <div class="relative z-10 glass-panel p-4 rounded-2xl border border-slate-700 flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-slate-800 text-brand-400 font-black text-sm flex items-center justify-center border border-slate-700">
+          <i class="fa-solid fa-check text-brand-400"></i>
+        </div>
+        <div>
+          <span class="text-[10px] text-brand-400 font-bold uppercase block">Completed</span>
+          <span class="text-xs font-bold text-white">1. Dates & Location</span>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="relative z-10 glass-panel p-4 rounded-2xl border border-slate-700 flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-slate-800 text-brand-400 font-black text-sm flex items-center justify-center border border-slate-700">
+          <i class="fa-solid fa-check text-brand-400"></i>
+        </div>
+        <div>
+          <span class="text-[10px] text-brand-400 font-bold uppercase block">Completed</span>
+          <span class="text-xs font-bold text-white">2. Vehicle Choice</span>
+        </div>
+      </div>
+
+      <!-- STEP 3 (ACTIVE) -->
+      <div class="relative z-10 glass-panel p-4 rounded-2xl border-2 border-brand-500 flex items-center space-x-3 shadow-lg shadow-brand-500/20">
+        <div class="w-10 h-10 rounded-xl step-active font-black text-base flex items-center justify-center">
+          3
+        </div>
+        <div>
+          <span class="text-[10px] text-brand-400 font-bold uppercase block">Current Step</span>
+          <span class="text-xs font-bold text-white">3. Protection & Add-ons</span>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="relative z-10 glass-panel p-4 rounded-2xl border border-slate-800 opacity-60 flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-slate-800 text-slate-500 font-bold text-sm flex items-center justify-center">
+          4
+        </div>
+        <div>
+          <span class="text-[10px] text-slate-500 font-bold uppercase block">Step 4</span>
+          <span class="text-xs font-bold text-slate-300">4. Confirmation & Pay</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAIN STEP 3 INTERFACE: PROTECTION CARDS & SUMMARY -->
+  <div class="max-w-6xl mx-auto grid grid-cols-12 gap-8 items-start">
+
+    <!-- PROTECTION TIERS COMPARISON (3 CARDS) -->
+    <div class="col-span-8 space-y-6">
+      <h3 class="text-xl font-bold text-white flex items-center gap-2">
+        <i class="fa-solid fa-shield-virus text-brand-400"></i> Choose Protection Coverage Level
+      </h3>
+
+      <div class="grid grid-cols-3 gap-4">
+
+        <!-- TIER 1: BASIC COVER -->
+        <div class="glass-panel p-5 rounded-2xl border border-slate-800 space-y-4 hover:border-slate-700 transition">
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Basic Included</div>
+          <div>
+            <span class="text-3xl font-black text-white">€0</span>
+            <span class="text-xs text-slate-400">/ day</span>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-normal">Standard Third Party Liability & Collision Damage Waiver with high deposit.</p>
+          <ul class="text-xs space-y-2 text-slate-300 border-t border-slate-800/80 pt-3">
+            <li class="flex items-center gap-2 text-slate-400"><i class="fa-solid fa-triangle-exclamation text-amber-500"></i> Deposit: €1,200 Held</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-400"></i> Third Party Liability</li>
+            <li class="flex items-center gap-2 text-slate-500"><i class="fa-solid fa-xmark text-slate-600"></i> Glass & Tires Exclusion</li>
+            <li class="flex items-center gap-2 text-slate-500"><i class="fa-solid fa-xmark text-slate-600"></i> Roadside Assistance Fee</li>
+          </ul>
+          <button class="w-full py-2.5 rounded-xl border border-slate-700 text-xs font-bold text-slate-300 hover:bg-slate-800">Select Basic</button>
+        </div>
+
+        <!-- TIER 2: SMART COVER -->
+        <div class="glass-panel p-5 rounded-2xl border border-slate-700 space-y-4 hover:border-brand-500/50 transition">
+          <div class="text-xs font-bold text-brand-400 uppercase tracking-wider">Smart Protection</div>
+          <div>
+            <span class="text-3xl font-black text-white">€12</span>
+            <span class="text-xs text-slate-400">/ day</span>
+          </div>
+          <p class="text-[11px] text-slate-300 leading-normal">Reduced deposit & comprehensive collision protection for peace of mind.</p>
+          <ul class="text-xs space-y-2 text-slate-300 border-t border-slate-800/80 pt-3">
+            <li class="flex items-center gap-2 text-brand-400"><i class="fa-solid fa-shield"></i> Reduced Deposit (€300)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-400"></i> Collision Waiver (CDW)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-400"></i> Theft Protection (TP)</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-400"></i> Windscreen & Mirror Cover</li>
+          </ul>
+          <button class="w-full py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-xs font-bold text-white hover:bg-slate-700">Select Smart</button>
+        </div>
+
+        <!-- TIER 3: SUPER COVER 0$ EXCESS (POPULAR / FEATURED) -->
+        <div class="glass-panel p-5 rounded-2xl border-2 border-brand-500 bg-brand-900/10 space-y-4 relative shadow-xl shadow-brand-500/10">
+          <span class="absolute -top-3 right-4 bg-brand-500 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">
+            Recommended • 0$ Deposit
+          </span>
+          <div class="text-xs font-extrabold text-brand-400 uppercase tracking-wider">VIP Super Cover</div>
+          <div>
+            <span class="text-3xl font-black text-brand-400">€22</span>
+            <span class="text-xs text-slate-400">/ day</span>
+          </div>
+          <p class="text-[11px] text-slate-200 leading-normal">Zero security deposit, zero excess deductible, complete worry-free coverage.</p>
+          <ul class="text-xs space-y-2 text-slate-200 border-t border-brand-500/20 pt-3">
+            <li class="flex items-center gap-2 font-bold text-brand-400"><i class="fa-solid fa-circle-check text-brand-400"></i> 0$ Security Deposit</li>
+            <li class="flex items-center gap-2 font-bold text-brand-400"><i class="fa-solid fa-circle-check text-brand-400"></i> 0$ Deductible / Excess</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-400"></i> Full Glass, Tires & Undercarriage</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-400"></i> 24/7 VIP Road Assistance</li>
+          </ul>
+          <button class="w-full py-2.5 rounded-xl bg-brand-500 text-slate-950 font-black text-xs shadow-lg shadow-brand-500/25 hover:bg-brand-400">Selected (Recommended)</button>
+        </div>
+
+      </div>
+
+      <!-- POPULAR EXTRAS / ADD-ONS -->
+      <div class="pt-4 space-y-3">
+        <h4 class="text-sm font-bold text-white">Popular Trip Extras</h4>
+        <div class="grid grid-cols-3 gap-3">
+
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between cursor-pointer hover:border-brand-500/40">
+            <div class="flex items-center space-x-3">
+              <input type="checkbox" checked class="accent-brand-500 w-4 h-4 rounded">
+              <div>
+                <div class="text-xs font-bold text-white">Cross-Border Permit</div>
+                <div class="text-[10px] text-slate-400">Travel across EU countries</div>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-brand-400">+€15 total</span>
+          </div>
+
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between cursor-pointer hover:border-brand-500/40">
+            <div class="flex items-center space-x-3">
+              <input type="checkbox" checked class="accent-brand-500 w-4 h-4 rounded">
+              <div>
+                <div class="text-xs font-bold text-white">Additional Driver</div>
+                <div class="text-[10px] text-slate-400">Share driving duties</div>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-brand-400">+€5 / day</span>
+          </div>
+
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between cursor-pointer hover:border-brand-500/40">
+            <div class="flex items-center space-x-3">
+              <input type="checkbox" class="accent-brand-500 w-4 h-4 rounded">
+              <div>
+                <div class="text-xs font-bold text-white">Child Safety Seat</div>
+                <div class="text-[10px] text-slate-400">ISOFIX 9-36 kg</div>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-brand-400">+€8 / day</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SUMMARY SIDEBAR -->
+    <div class="col-span-4 glass-panel p-6 rounded-3xl border border-slate-700 space-y-5">
+      <h3 class="text-base font-bold text-white border-b border-slate-800 pb-3 flex items-center justify-between">
+        <span>Rental Breakdown</span>
+        <span class="text-xs text-brand-400 font-semibold"><i class="fa-solid fa-lock mr-1"></i> Lock Price</span>
+      </h3>
+
+      <!-- CAR SUMMARY -->
+      <div class="flex items-center space-x-4 bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+        <div class="w-16 h-12 bg-slate-800 rounded-lg flex items-center justify-center text-brand-400 font-extrabold text-xl">
+          <i class="fa-solid fa-car"></i>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white">BMW X5 xDrive40i M</h4>
+          <p class="text-xs text-slate-400">Vienna Airport (VIE) • 7 Days</p>
+        </div>
+      </div>
+
+      <!-- PRICE LINES -->
+      <div class="space-y-2 text-xs text-slate-300">
+        <div class="flex justify-between">
+          <span class="text-slate-400">Vehicle Rental (7 Days @ €79/d)</span>
+          <span class="font-bold text-white">€553.00</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-400">VIP Super Cover (0$ Excess)</span>
+          <span class="font-bold text-brand-400">€154.00</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-400">Cross-Border Permit</span>
+          <span class="font-bold text-white">€15.00</span>
+        </div>
+        <div class="flex justify-between text-emerald-400 font-semibold">
+          <span>Promo DRYYVE2026 (-15%)</span>
+          <span>-€82.95</span>
+        </div>
+      </div>
+
+      <!-- TOTAL PRICE -->
+      <div class="border-t border-slate-800 pt-4 flex items-center justify-between">
+        <div>
+          <span class="text-xs text-slate-400 uppercase font-bold block">Total Amount Due</span>
+          <span class="text-2xl font-black text-brand-400">€639.05</span>
+        </div>
+        <button class="px-6 py-3.5 rounded-2xl bg-brand-500 text-slate-950 font-black text-sm shadow-xl shadow-brand-500/30 hover:bg-brand-400 transition flex items-center gap-2">
+          <span>CONTINUE TO STEP 4</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="text-[10px] text-center text-slate-400 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-shield-halved text-brand-400"></i> Free Cancellation up to 24 hours before pickup
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

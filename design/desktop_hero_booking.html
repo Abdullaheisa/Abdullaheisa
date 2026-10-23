@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dryyve 2.0 Redesign - Desktop Hero & Booking Widget</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+            },
+            darkbg: '#080C14',
+            darkcard: '#0F172A',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #080C14; color: #F8FAFC; overflow-x: hidden; }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.3);
+    }
+    .glow-emerald-lg {
+      box-shadow: 0 0 80px -20px rgba(16, 185, 129, 0.4);
+    }
+    .hero-gradient {
+      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.15) 0%, rgba(8, 12, 20, 1) 70%);
+    }
+  </style>
+</head>
+<body class="w-[1920px] h-[1080px] relative overflow-hidden hero-gradient">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-brand-600/20 border-b border-brand-500/20 py-2 px-12 text-xs text-brand-400 font-medium flex justify-between items-center">
+    <div class="flex items-center space-x-6">
+      <span><i class="fa-solid fa-bolt mr-1.5 text-brand-400"></i> Summer Deal: Get 15% OFF on Electric & SUV Fleet with code <strong class="text-white">DRYYVE2026</strong></span>
+      <span class="text-slate-600">|</span>
+      <span><i class="fa-solid fa-shield-halved mr-1.5 text-brand-400"></i> Zero Security Deposit Option Available</span>
+    </div>
+    <div class="flex items-center space-x-6 text-slate-300">
+      <a href="#" class="hover:text-white transition"><i class="fa-solid fa-headset mr-1"></i> 24/7 Support</a>
+      <a href="#" class="hover:text-white transition"><i class="fa-solid fa-globe mr-1"></i> Global / English (USD $)</a>
+      <a href="#" class="hover:text-white transition"><i class="fa-solid fa-[#10b981] mr-1"></i> العربية</a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="px-12 py-5 flex justify-between items-center border-b border-slate-800/60 glass-panel sticky top-0 z-50">
+    <div class="flex items-center space-x-12">
+      <!-- LOGO -->
+      <a href="#" class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-slate-950 font-black text-2xl shadow-lg shadow-brand-500/20">
+          D
+        </div>
+        <span class="text-2xl font-black tracking-wider text-white">DRYYVE<span class="text-brand-400">.</span></span>
+      </a>
+
+      <!-- NAV LINKS -->
+      <nav class="flex items-center space-x-8 text-sm font-semibold text-slate-300">
+        <a href="#" class="text-white font-bold flex items-center gap-1.5"><i class="fa-solid fa-car text-brand-400"></i> Vehicle Fleet</a>
+        <a href="#" class="hover:text-white transition">Locations <span class="bg-brand-500/10 text-brand-400 text-[10px] px-2 py-0.5 rounded-full border border-brand-500/20 ml-1">5 Countries</span></a>
+        <a href="#" class="hover:text-white transition">Packages & Protection</a>
+        <a href="#" class="hover:text-white transition">How It Works</a>
+        <a href="#" class="hover:text-white transition">FAQ & Help</a>
+      </nav>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="flex items-center space-x-4">
+      <a href="#" class="px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800/60 transition flex items-center gap-2 border border-slate-700/50">
+        <i class="fa-solid fa-receipt text-slate-400"></i> Manage Booking
+      </a>
+      <a href="#" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-brand-500 hover:bg-brand-400 text-slate-950 shadow-lg shadow-brand-500/25 transition duration-200 flex items-center gap-2">
+        <i class="fa-solid fa-calendar-check"></i> Book Now
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO CONTENT SECTION -->
+  <main class="max-w-[1720px] mx-auto px-12 pt-8 pb-12 grid grid-cols-12 gap-8 items-center">
+
+    <!-- LEFT COLUMN: HEADLINE & SEARCH ENGINE WIDGET -->
+    <div class="col-span-7 space-y-6">
+
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold uppercase tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+        <span>Premium Car Rental Experience • Austria • Hungary • Italy • Morocco • KSA</span>
+      </div>
+
+      <h1 class="text-5xl font-extrabold text-white leading-tight tracking-tight">
+        Drive Your Way With <br>
+        <span class="bg-gradient-to-r from-white via-slate-100 to-brand-400 bg-clip-text text-transparent">Zero Deposit & Unlimited Freedom.</span>
+      </h1>
+
+      <p class="text-slate-400 text-base max-w-2xl leading-relaxed">
+        Experience seamless car rentals with dryyve 2.0. Transparent pricing, instant airport pickup, brand-new luxury & economy vehicles, and zero hidden fees.
+      </p>
+
+      <!-- SEARCH ENGINE WIDGET (GLASSMORPHIC) -->
+      <div class="glass-panel p-6 rounded-3xl glow-emerald border border-slate-700/60 space-y-5">
+
+        <!-- TRIP TYPE TABS -->
+        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+          <div class="flex items-center space-x-2 bg-slate-950/60 p-1 rounded-xl border border-slate-800">
+            <button class="px-4 py-2 rounded-lg text-xs font-bold bg-brand-500 text-slate-950 shadow">
+              <i class="fa-solid fa-arrows-rotate mr-1.5"></i> Round Trip
+            </button>
+            <button class="px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition">
+              <i class="fa-solid fa-arrow-right-long mr-1.5"></i> One Way
+            </button>
+            <button class="px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition">
+              <i class="fa-solid fa-business-time mr-1.5"></i> Monthly / Subscription
+            </button>
+          </div>
+
+          <div class="flex items-center space-x-3 text-xs text-slate-300">
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" checked class="accent-brand-500 w-4 h-4 rounded">
+              <span>Driver age: 25 - 70</span>
+            </label>
+            <span class="text-slate-700">|</span>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" class="accent-brand-500 w-4 h-4 rounded">
+              <span>Return to different location</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- SEARCH INPUT FIELDS GRID -->
+        <div class="grid grid-cols-12 gap-3">
+
+          <!-- PICKUP LOCATION -->
+          <div class="col-span-6 bg-slate-950/70 p-3.5 rounded-2xl border border-slate-800/80 hover:border-brand-500/50 transition">
+            <label id="pickup-label" class="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center justify-between">
+              <span><i class="fa-solid fa-location-dot text-brand-400 mr-1"></i> Pick-up Location</span>
+              <span class="text-[9px] text-brand-400 font-semibold bg-brand-500/10 px-1.5 py-0.5 rounded">Popular</span>
+            </label>
+            <div class="mt-1 flex items-center justify-between">
+              <input type="text" aria-labelledby="pickup-label" aria-label="Pick-up Location" value="Vienna Airport (VIE) - Terminal 3" class="bg-transparent text-sm font-semibold text-white focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:outline-none rounded-sm px-1 w-full">
+              <i class="fa-solid fa-plane-arrival text-slate-500 text-xs" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <!-- DROP OFF LOCATION -->
+          <div class="col-span-6 bg-slate-950/70 p-3.5 rounded-2xl border border-slate-800/80 hover:border-brand-500/50 transition">
+            <label id="dropoff-label" class="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center justify-between">
+              <span><i class="fa-solid fa-location-crosshairs text-brand-400 mr-1"></i> Drop-off Location</span>
+              <span class="text-[9px] text-slate-400">Same as pickup</span>
+            </label>
+            <div class="mt-1 flex items-center justify-between">
+              <input type="text" aria-labelledby="dropoff-label" aria-label="Drop-off Location" value="Vienna Airport (VIE) - Terminal 3" class="bg-transparent text-sm font-semibold text-white focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:outline-none rounded-sm px-1 w-full">
+              <i class="fa-solid fa-plane-departure text-slate-500 text-xs" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <!-- PICKUP DATE & TIME -->
+          <div class="col-span-6 bg-slate-950/70 p-3.5 rounded-2xl border border-slate-800/80 hover:border-brand-500/50 transition">
+            <label class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+              <i class="fa-regular fa-calendar-check text-brand-400 mr-1"></i> Pick-up Date & Time
+            </label>
+            <div class="mt-1 flex items-center justify-between">
+              <span class="text-sm font-semibold text-white">28 Oct 2026, 10:00 AM</span>
+              <i class="fa-regular fa-clock text-slate-500 text-xs"></i>
+            </div>
+          </div>
+
+          <!-- DROP OFF DATE & TIME -->
+          <div class="col-span-6 bg-slate-950/70 p-3.5 rounded-2xl border border-slate-800/80 hover:border-brand-500/50 transition">
+            <label class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+              <i class="fa-regular fa-calendar-xmark text-brand-400 mr-1"></i> Drop-off Date & Time
+            </label>
+            <div class="mt-1 flex items-center justify-between">
+              <span class="text-sm font-semibold text-white">04 Nov 2026, 10:00 AM <span class="text-xs text-brand-400 font-bold ml-1">(7 Days)</span></span>
+              <i class="fa-regular fa-clock text-slate-500 text-xs"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SEARCH SUBMIT BUTTON & FAST FILTERS -->
+        <div class="flex items-center justify-between gap-4 pt-1">
+          <div class="flex items-center space-x-2 text-xs text-slate-400">
+            <span class="font-medium">Filter by category:</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-white font-semibold hover:bg-brand-500 hover:text-slate-950 cursor-pointer transition">SUV (42)</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-white font-semibold hover:bg-brand-500 hover:text-slate-950 cursor-pointer transition">Electric (18)</span>
+            <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-white font-semibold hover:bg-brand-500 hover:text-slate-950 cursor-pointer transition">Luxury (24)</span>
+          </div>
+
+          <button aria-label="Find available cars" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-500 to-brand-400 text-slate-950 font-extrabold text-base shadow-xl shadow-brand-500/30 hover:scale-[1.02] active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:outline-none transition flex items-center gap-3">
+            <span>FIND AVAILABLE CARS</span>
+            <i class="fa-solid fa-arrow-right text-lg" aria-hidden="true"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- KEY TRUST METRICS BAR -->
+      <div class="grid grid-cols-4 gap-4 pt-2">
+        <div class="glass-card p-3 rounded-xl flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center font-bold text-base">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">4.9 / 5 Rating</div>
+            <div class="text-[11px] text-slate-400">12,500+ Verified Reviews</div>
+          </div>
+        </div>
+
+        <div class="glass-card p-3 rounded-xl flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center font-bold text-base">
+            <i class="fa-solid fa-car-side"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">2025/2026 Fleet</div>
+            <div class="text-[11px] text-slate-400">Guaranteed Brand New</div>
+          </div>
+        </div>
+
+        <div class="glass-card p-3 rounded-xl flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center font-bold text-base">
+            <i class="fa-solid fa-coins"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">No Hidden Fees</div>
+            <div class="text-[11px] text-slate-400">Full Coverage Included</div>
+          </div>
+        </div>
+
+        <div class="glass-card p-3 rounded-xl flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center font-bold text-base">
+            <i class="fa-solid fa-key"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">Fast Digital Lock</div>
+            <div class="text-[11px] text-slate-400">Skip Counter Option</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: FEATURED VEHICLE DISPLAY CARD & LOCATION BADGES -->
+    <div class="col-span-5 relative">
+
+      <!-- BACKGROUND GLOW DECORATION -->
+      <div class="absolute -top-10 -right-10 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- MAIN CAR SHOWCASE CARD -->
+      <div class="glass-panel p-6 rounded-3xl border border-slate-700/60 relative overflow-hidden space-y-6">
+
+        <!-- TOP TAG & BADGE -->
+        <div class="flex justify-between items-center">
+          <span class="px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/30 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-crown text-amber-400"></i> Most Popular Choice
+          </span>
+          <span class="text-xs text-slate-400 font-medium">Vienna & Budapest Hub</span>
+        </div>
+
+        <!-- CAR IMAGE / VISUAL RENDER -->
+        <div class="relative h-56 flex items-center justify-center my-2">
+          <!-- Stylized Modern SUV SVG Illustration -->
+          <svg class="w-full h-full drop-shadow-[0_20px_30px_rgba(16,185,129,0.2)]" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 210 Q 70 140, 160 110 L 260 90 Q 320 60, 420 80 L 530 130 Q 580 150, 570 210 Z" fill="url(#car-body-grad)"/>
+            <path d="M180 115 L 260 95 L 360 85 L 430 120 Z" fill="#0F172A" opacity="0.85"/>
+            <!-- Wheels -->
+            <circle cx="150" cy="210" r="45" fill="#1E293B" stroke="#10B981" stroke-width="8"/>
+            <circle cx="150" cy="210" r="20" fill="#64748B"/>
+            <circle cx="470" cy="210" r="45" fill="#1E293B" stroke="#10B981" stroke-width="8"/>
+            <circle cx="470" cy="210" r="20" fill="#64748B"/>
+            <!-- Headlights glow -->
+            <polygon points="540,160 600,140 600,190" fill="url(#headlight-glow)" opacity="0.6"/>
+            <defs>
+              <linearGradient id="car-body-grad" x1="0" y1="0" x2="600" y2="300">
+                <stop offset="0%" stop-color="#334155"/>
+                <stop offset="50%" stop-color="#1E293B"/>
+                <stop offset="100%" stop-color="#0F172A"/>
+              </linearGradient>
+              <linearGradient id="headlight-glow" x1="540" y1="160" x2="600" y2="160">
+                <stop offset="0%" stop-color="#34D399" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- CAR SPECS & TITLE -->
+        <div>
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl font-bold text-white">BMW X5 xDrive40i M-Sport</h3>
+              <p class="text-slate-400 text-xs mt-0.5">Luxury Executive SUV • Automatic • All-Wheel Drive</p>
+            </div>
+            <div class="text-right">
+              <span class="text-2xl font-extrabold text-brand-400">€79</span>
+              <span class="text-slate-400 text-xs"> / day</span>
+            </div>
+          </div>
+
+          <!-- SPECS ICONS ROW -->
+          <div class="grid grid-cols-4 gap-2 mt-4 pt-4 border-t border-slate-800 text-xs text-slate-300">
+            <div class="flex items-center gap-1.5"><i class="fa-solid fa-users text-brand-400"></i> 5 Seats</div>
+            <div class="flex items-center gap-1.5"><i class="fa-solid fa-suitcase text-brand-400"></i> 4 Bags</div>
+            <div class="flex items-center gap-1.5"><i class="fa-solid fa-gears text-brand-400"></i> Auto</div>
+            <div class="flex items-center gap-1.5"><i class="fa-solid fa-gas-pump text-brand-400"></i> Hybrid</div>
+          </div>
+        </div>
+
+        <!-- POPULAR DESTINATIONS SHORTCUTS -->
+        <div class="pt-2">
+          <div class="text-xs font-bold text-slate-300 mb-2.5 flex items-center justify-between">
+            <span><i class="fa-solid fa-map-pin text-brand-400 mr-1"></i> TOP RENTAL LOCATIONS</span>
+            <a href="#" class="text-brand-400 text-[11px] hover:underline">View All 18 Locations →</a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2">
+            <div class="bg-slate-950/60 p-2.5 rounded-xl border border-slate-800/80 hover:border-brand-500/40 cursor-pointer transition">
+              <div class="text-xs font-bold text-white flex items-center justify-between">
+                <span>🇦🇹 Vienna</span>
+                <span class="text-[10px] text-brand-400">€35/d</span>
+              </div>
+              <span class="text-[10px] text-slate-400">Airport & Central</span>
+            </div>
+
+            <div class="bg-slate-950/60 p-2.5 rounded-xl border border-slate-800/80 hover:border-brand-500/40 cursor-pointer transition">
+              <div class="text-xs font-bold text-white flex items-center justify-between">
+                <span>🇭🇺 Budapest</span>
+                <span class="text-[10px] text-brand-400">€32/d</span>
+              </div>
+              <span class="text-[10px] text-slate-400">Downtown Hub</span>
+            </div>
+
+            <div class="bg-slate-950/60 p-2.5 rounded-xl border border-slate-800/80 hover:border-brand-500/40 cursor-pointer transition">
+              <div class="text-xs font-bold text-white flex items-center justify-between">
+                <span>🇮🇹 Milan</span>
+                <span class="text-[10px] text-brand-400">€39/d</span>
+              </div>
+              <span class="text-[10px] text-slate-400">Malpensa (MXP)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- BOTTOM FOOTER MARQUEE & DESIGN TAG -->
+  <footer class="absolute bottom-3 left-12 right-12 flex justify-between items-center text-xs text-slate-500 border-t border-slate-800/40 pt-3">
+    <div>Dryyve UI/UX 2.0 Design Blueprint • Generated High-Fidelity Specs</div>
+    <div class="flex items-center space-x-4">
+      <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield text-brand-400"></i> SSL 256-Bit Encrypted</span>
+      <span>•</span>
+      <span class="flex items-center gap-1.5"><i class="fa-solid fa-credit-card text-brand-400"></i> Visa / Mastercard / Apple Pay</span>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dryyve 2.0 Redesign - Fleet Catalog & Protection Packages</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+            },
+            darkbg: '#080C14',
+            darkcard: '#0F172A',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #080C14; color: #F8FAFC; overflow-x: hidden; }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.25);
+    }
+  </style>
+</head>
+<body class="w-[1920px] h-[1200px] relative overflow-hidden bg-slate-950 p-10">
+
+  <!-- HEADER HEADER TITLE & BAR -->
+  <div class="flex justify-between items-center mb-8 border-b border-slate-800 pb-6">
+    <div>
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-bold uppercase tracking-wider mb-2">
+        <span>Dryyve Fleet Design • 2026 Model Guarantee</span>
+      </div>
+      <h2 class="text-4xl font-extrabold text-white">Choose Your Perfect Vehicle</h2>
+      <p class="text-slate-400 text-sm mt-1">Showing 148 available vehicles in <strong class="text-white">Vienna Airport (VIE)</strong> for <strong class="text-brand-400">28 Oct - 04 Nov 2026</strong></p>
+    </div>
+
+    <!-- CATEGORY FILTER PILLS -->
+    <div class="flex items-center space-x-2 bg-slate-900/90 p-1.5 rounded-2xl border border-slate-800">
+      <button class="px-5 py-2.5 rounded-xl text-xs font-extrabold bg-brand-500 text-slate-950 shadow">All Fleet (148)</button>
+      <button class="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition">⚡ EV & Electric (18)</button>
+      <button class="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition">🚘 SUV & 4x4 (42)</button>
+      <button class="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition">👑 Luxury & Executive (24)</button>
+      <button class="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition">🍃 Economy (35)</button>
+    </div>
+  </div>
+
+  <!-- MAIN CATALOG CONTENT: SIDEBAR + CAR GRID -->
+  <div class="grid grid-cols-12 gap-8">
+
+    <!-- LEFT SIDEBAR: FILTERS & PROTECTION PACKAGES -->
+    <div class="col-span-3 space-y-6">
+
+      <!-- FILTER DRAWER PANEL -->
+      <div class="glass-panel p-5 rounded-2xl border border-slate-800 space-y-5">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+          <h3 class="text-base font-bold text-white flex items-center gap-2"><i class="fa-solid fa-sliders text-brand-400"></i> Smart Filters</h3>
+          <button class="text-xs text-brand-400 hover:underline">Reset All</button>
+        </div>
+
+        <!-- TRANSMISSION -->
+        <div>
+          <label class="text-xs font-bold uppercase text-slate-400 block mb-2">Transmission</label>
+          <div class="grid grid-cols-2 gap-2">
+            <button class="px-3 py-2 rounded-xl bg-brand-500/20 text-brand-400 border border-brand-500/40 text-xs font-bold text-center">Automatic (120)</button>
+            <button class="px-3 py-2 rounded-xl bg-slate-900 text-slate-400 border border-slate-800 text-xs font-medium text-center">Manual (28)</button>
+          </div>
+        </div>
+
+        <!-- FUEL TYPE -->
+        <div>
+          <label class="text-xs font-bold uppercase text-slate-400 block mb-2">Engine & Fuel</label>
+          <div class="space-y-2 text-xs text-slate-300">
+            <label class="flex items-center justify-between p-2 rounded-lg bg-slate-900/60 border border-slate-800 cursor-pointer">
+              <span class="flex items-center gap-2"><input type="checkbox" checked class="accent-brand-500"> Electric (EV)</span>
+              <span class="text-slate-500">18</span>
+            </label>
+            <label class="flex items-center justify-between p-2 rounded-lg bg-slate-900/60 border border-slate-800 cursor-pointer">
+              <span class="flex items-center gap-2"><input type="checkbox" checked class="accent-brand-500"> Plug-in Hybrid</span>
+              <span class="text-slate-500">34</span>
+            </label>
+            <label class="flex items-center justify-between p-2 rounded-lg bg-slate-900/60 border border-slate-800 cursor-pointer">
+              <span class="flex items-center gap-2"><input type="checkbox" class="accent-brand-500"> Petrol / Diesel</span>
+              <span class="text-slate-500">96</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- PRICE RANGE SLIDER -->
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <label class="text-xs font-bold uppercase text-slate-400">Daily Rate</label>
+            <span class="text-xs font-extrabold text-brand-400">€25 - €180/day</span>
+          </div>
+          <input type="range" min="25" max="250" value="180" class="w-full accent-brand-500 bg-slate-800 h-2 rounded-lg cursor-pointer">
+        </div>
+
+        <!-- DEPOSIT PROTECTION SUMMARY -->
+        <div class="p-4 rounded-xl bg-gradient-to-br from-brand-900/40 to-slate-900 border border-brand-500/30 space-y-2">
+          <div class="flex items-center space-x-2 text-brand-400 font-bold text-xs">
+            <i class="fa-solid fa-shield-check text-sm"></i>
+            <span>SUPER COVER INCLUDED</span>
+          </div>
+          <p class="text-[11px] text-slate-300 leading-tight">
+            Select <strong>Zero Deposit Package</strong> for 100% peace of mind with 0$ deductible for scratches, windows & tires.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT: VEHICLE CARDS GRID (2x3 CARDS) -->
+    <div class="col-span-9 grid grid-cols-3 gap-6">
+
+      <!-- CARD 1: TESLA MODEL Y -->
+      <div class="glass-panel p-5 rounded-3xl border border-slate-800 hover:border-brand-500/60 transition glow-emerald space-y-4 relative flex flex-col justify-between">
+        <div class="absolute top-4 right-4 bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30 uppercase">
+          ⚡ 100% Electric
+        </div>
+
+        <div>
+          <!-- CAR IMAGE SIMULATION -->
+          <div class="h-36 flex items-center justify-center my-2">
+            <svg class="w-48 h-28 drop-shadow-[0_10px_15px_rgba(16,185,129,0.3)]" viewBox="0 0 300 150" fill="none">
+              <path d="M30 110 Q 40 70, 90 55 L 140 40 Q 180 30, 230 45 L 270 70 Q 295 80, 290 110 Z" fill="#0EA5E9"/>
+              <circle cx="80" cy="110" r="22" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+              <circle cx="230" cy="110" r="22" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+            </svg>
+          </div>
+
+          <h4 class="text-lg font-bold text-white">Tesla Model Y Long Range</h4>
+          <p class="text-xs text-slate-400">Autopilot • Dual Motor AWD • 533 km Range</p>
+
+          <div class="grid grid-cols-3 gap-1 my-3 text-[11px] text-slate-300 bg-slate-950/50 p-2 rounded-xl">
+            <span><i class="fa-solid fa-users text-brand-400"></i> 5 Seats</span>
+            <span><i class="fa-solid fa-suitcase text-brand-400"></i> 3 Bags</span>
+            <span><i class="fa-solid fa-bolt text-brand-400"></i> EV</span>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+          <div>
+            <span class="text-2xl font-black text-white">€49</span>
+            <span class="text-xs text-slate-400">/day</span>
+            <div class="text-[10px] text-brand-400 font-semibold">Unlimited Km • Free Cancellation</div>
+          </div>
+          <button class="px-5 py-2.5 rounded-xl bg-brand-500 text-slate-950 font-bold text-xs hover:bg-brand-400 transition">Select Car</button>
+        </div>
+      </div>
+
+      <!-- CARD 2: AUDI A6 SEDAN -->
+      <div class="glass-panel p-5 rounded-3xl border border-slate-800 hover:border-brand-500/60 transition space-y-4 flex flex-col justify-between">
+        <div class="absolute top-4 right-4 bg-slate-800 text-slate-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-700 uppercase">
+          👑 Business Class
+        </div>
+
+        <div>
+          <div class="h-36 flex items-center justify-center my-2">
+            <svg class="w-48 h-28" viewBox="0 0 300 150" fill="none">
+              <path d="M30 110 Q 40 70, 90 55 L 150 45 Q 190 35, 230 50 L 275 75 Q 295 85, 290 110 Z" fill="#64748B"/>
+              <circle cx="80" cy="110" r="22" fill="#1E293B" stroke="#94A3B8" stroke-width="4"/>
+              <circle cx="230" cy="110" r="22" fill="#1E293B" stroke="#94A3B8" stroke-width="4"/>
+            </svg>
+          </div>
+
+          <h4 class="text-lg font-bold text-white">Audi A6 Limousine S-Line</h4>
+          <p class="text-xs text-slate-400">Quattro AWD • Virtual Cockpit • Mild Hybrid</p>
+
+          <div class="grid grid-cols-3 gap-1 my-3 text-[11px] text-slate-300 bg-slate-950/50 p-2 rounded-xl">
+            <span><i class="fa-solid fa-users text-brand-400"></i> 5 Seats</span>
+            <span><i class="fa-solid fa-suitcase text-brand-400"></i> 4 Bags</span>
+            <span><i class="fa-solid fa-gears text-brand-400"></i> Auto</span>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+          <div>
+            <span class="text-2xl font-black text-white">€65</span>
+            <span class="text-xs text-slate-400">/day</span>
+            <div class="text-[10px] text-brand-400 font-semibold">Unlimited Km • Free Cancellation</div>
+          </div>
+          <button class="px-5 py-2.5 rounded-xl bg-brand-500 text-slate-950 font-bold text-xs hover:bg-brand-400 transition">Select Car</button>
+        </div>
+      </div>
+
+      <!-- CARD 3: MERCEDES BENZ V-CLASS -->
+      <div class="glass-panel p-5 rounded-3xl border border-slate-800 hover:border-brand-500/60 transition space-y-4 flex flex-col justify-between">
+        <div class="absolute top-4 right-4 bg-blue-500/10 text-blue-400 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30 uppercase">
+          🚐 7-8 Passengers
+        </div>
+
+        <div>
+          <div class="h-36 flex items-center justify-center my-2">
+            <svg class="w-48 h-28" viewBox="0 0 300 150" fill="none">
+              <path d="M20 110 L 30 50 L 180 40 L 260 55 L 280 110 Z" fill="#334155"/>
+              <circle cx="70" cy="110" r="22" fill="#1E293B" stroke="#64748B" stroke-width="4"/>
+              <circle cx="230" cy="110" r="22" fill="#1E293B" stroke="#64748B" stroke-width="4"/>
+            </svg>
+          </div>
+
+          <h4 class="text-lg font-bold text-white">Mercedes-Benz V-Class AMG</h4>
+          <p class="text-xs text-slate-400">VIP Group Shuttle • Leather Seats • 8 Baggage</p>
+
+          <div class="grid grid-cols-3 gap-1 my-3 text-[11px] text-slate-300 bg-slate-950/50 p-2 rounded-xl">
+            <span><i class="fa-solid fa-users text-brand-400"></i> 8 Seats</span>
+            <span><i class="fa-solid fa-suitcase text-brand-400"></i> 7 Bags</span>
+            <span><i class="fa-solid fa-gears text-brand-400"></i> Auto</span>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+          <div>
+            <span class="text-2xl font-black text-white">€89</span>
+            <span class="text-xs text-slate-400">/day</span>
+            <div class="text-[10px] text-brand-400 font-semibold">Unlimited Km • Free Cancellation</div>
+          </div>
+          <button class="px-5 py-2.5 rounded-xl bg-brand-500 text-slate-950 font-bold text-xs hover:bg-brand-400 transition">Select Car</button>
+        </div>
+      </div>
+
+      <!-- CARD 4: VOLKSWAGEN GOLF 8 -->
+      <div class="glass-panel p-5 rounded-3xl border border-slate-800 hover:border-brand-500/60 transition space-y-4 flex flex-col justify-between">
+        <div class="absolute top-4 right-4 bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30 uppercase">
+          🔥 Best Value
+        </div>
+
+        <div>
+          <div class="h-36 flex items-center justify-center my-2">
+            <svg class="w-48 h-28" viewBox="0 0 300 150" fill="none">
+              <path d="M40 110 Q 50 75, 90 65 L 160 50 Q 200 45, 240 65 L 270 85 L 275 110 Z" fill="#059669"/>
+              <circle cx="80" cy="110" r="20" fill="#1E293B" stroke="#10B981" stroke-width="4"/>
+              <circle cx="220" cy="110" r="20" fill="#1E293B" stroke="#10B981" stroke-width="4"/>
+            </svg>
+          </div>
+
+          <h4 class="text-lg font-bold text-white">Volkswagen Golf 8 Automatic</h4>
+          <p class="text-xs text-slate-400">Compact Hatchback • Apple CarPlay • Eco Hybrid</p>
+
+          <div class="grid grid-cols-3 gap-1 my-3 text-[11px] text-slate-300 bg-slate-950/50 p-2 rounded-xl">
+            <span><i class="fa-solid fa-users text-brand-400"></i> 5 Seats</span>
+            <span><i class="fa-solid fa-suitcase text-brand-400"></i> 2 Bags</span>
+            <span><i class="fa-solid fa-gears text-brand-400"></i> Auto</span>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+          <div>
+            <span class="text-2xl font-black text-white">€29</span>
+            <span class="text-xs text-slate-400">/day</span>
+            <div class="text-[10px] text-brand-400 font-semibold">Unlimited Km • Free Cancellation</div>
+          </div>
+          <button class="px-5 py-2.5 rounded-xl bg-brand-500 text-slate-950 font-bold text-xs hover:bg-brand-400 transition">Select Car</button>
+        </div>
+      </div>
+
+      <!-- CARD 5: PORSCHE MACAN GTS -->
+      <div class="glass-panel p-5 rounded-3xl border border-slate-800 hover:border-brand-500/60 transition space-y-4 flex flex-col justify-between">
+        <div class="absolute top-4 right-4 bg-amber-500/10 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30 uppercase">
+          ⭐ Luxury Supercar SUV
+        </div>
+
+        <div>
+          <div class="h-36 flex items-center justify-center my-2">
+            <svg class="w-48 h-28" viewBox="0 0 300 150" fill="none">
+              <path d="M30 110 Q 50 65, 100 50 L 160 40 Q 220 35, 260 60 L 280 85 L 285 110 Z" fill="#B91C1C"/>
+              <circle cx="80" cy="110" r="22" fill="#1E293B" stroke="#EF4444" stroke-width="4"/>
+              <circle cx="230" cy="110" r="22" fill="#1E293B" stroke="#EF4444" stroke-width="4"/>
+            </svg>
+          </div>
+
+          <h4 class="text-lg font-bold text-white">Porsche Macan GTS V6</h4>
+          <p class="text-xs text-slate-400">440 HP Performance • Panoramic Roof • Sport Exhaust</p>
+
+          <div class="grid grid-cols-3 gap-1 my-3 text-[11px] text-slate-300 bg-slate-950/50 p-2 rounded-xl">
+            <span><i class="fa-solid fa-users text-brand-400"></i> 5 Seats</span>
+            <span><i class="fa-solid fa-suitcase text-brand-400"></i> 3 Bags</span>
+            <span><i class="fa-solid fa-gauge-high text-brand-400"></i> 440 HP</span>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+          <div>
+            <span class="text-2xl font-black text-white">€149</span>
+            <span class="text-xs text-slate-400">/day</span>
+            <div class="text-[10px] text-brand-400 font-semibold">Unlimited Km • Free Cancellation</div>
+          </div>
+          <button class="px-5 py-2.5 rounded-xl bg-brand-500 text-slate-950 font-bold text-xs hover:bg-brand-400 transition">Select Car</button>
+        </div>
+      </div>
+
+      <!-- CARD 6: TOYOTA RAV4 HYBRID -->
+      <div class="glass-panel p-5 rounded-3xl border border-slate-800 hover:border-brand-500/60 transition space-y-4 flex flex-col justify-between">
+        <div class="absolute top-4 right-4 bg-teal-500/10 text-teal-400 text-[10px] font-bold px-2.5 py-1 rounded-full border border-teal-500/30 uppercase">
+          🌱 Eco Hybrid
+        </div>
+
+        <div>
+          <div class="h-36 flex items-center justify-center my-2">
+            <svg class="w-48 h-28" viewBox="0 0 300 150" fill="none">
+              <path d="M30 110 Q 50 65, 110 50 L 170 45 Q 220 40, 260 65 L 280 85 L 285 110 Z" fill="#0284C7"/>
+              <circle cx="80" cy="110" r="22" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+              <circle cx="230" cy="110" r="22" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+            </svg>
+          </div>
+
+          <h4 class="text-lg font-bold text-white">Toyota RAV4 AWD Hybrid</h4>
+          <p class="text-xs text-slate-400">Family Crossover • Low Fuel • All Weather Drive</p>
+
+          <div class="grid grid-cols-3 gap-1 my-3 text-[11px] text-slate-300 bg-slate-950/50 p-2 rounded-xl">
+            <span><i class="fa-solid fa-users text-brand-400"></i> 5 Seats</span>
+            <span><i class="fa-solid fa-suitcase text-brand-400"></i> 4 Bags</span>
+            <span><i class="fa-solid fa-leaf text-brand-400"></i> Hybrid</span>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+          <div>
+            <span class="text-2xl font-black text-white">€45</span>
+            <span class="text-xs text-slate-400">/day</span>
+            <div class="text-[10px] text-brand-400 font-semibold">Unlimited Km • Free Cancellation</div>
+          </div>
+          <button class="px-5 py-2.5 rounded-xl bg-brand-500 text-slate-950 font-bold text-xs hover:bg-brand-400 transition">Select Car</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
