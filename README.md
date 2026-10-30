@@ -16,7 +16,7 @@ I am a student, currently studying at the Faculty of Science, Al-Azhar Universit
 	- ![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat-square&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23FFCE5A)
 	- ![React](https://img.shields.io/badge/-React-%23282C34?style=flat-square&logo=react)
 	- ![Sass](https://img.shields.io/badge/-Sass-%23CC6699?style=flat-square&logo=sass&logoColor=ffffff)
-	- ![Adobe Photoshop](http://img.shields.io/badge/-Abode%20Photoshop-26C9FF?style=flat-square&logo=adobe-photoshop&logoColor=ffffff)
+	- ![Adobe Photoshop](https://img.shields.io/badge/-Abode%20Photoshop-26C9FF?style=flat-square&logo=adobe-photoshop&logoColor=ffffff)
 
 ## What I want to do next :thinking:
 - Backend Development (to become a Full-Stack developer)
