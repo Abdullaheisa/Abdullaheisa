@@ -2,7 +2,7 @@
 # Welcome to my github! 👋
 
 <div align="center">
-	<img src="https://i.imgur.com/8MupZHY.gif" width="400px" />
+	<img src="https://i.imgur.com/8MupZHY.gif" alt="Welcome animation" width="400px" />
 </div>
 
 ## About me :mortar_board:
